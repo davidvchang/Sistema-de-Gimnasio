@@ -36,6 +36,7 @@
             this.btnHome = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panelContenedor = new System.Windows.Forms.Panel();
+            this.btnEditar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -45,6 +46,7 @@
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.btnConfig);
             this.panel1.Controls.Add(this.btnShowRegisters);
+            this.panel1.Controls.Add(this.btnEditar);
             this.panel1.Controls.Add(this.btnRegister);
             this.panel1.Controls.Add(this.btnHome);
             this.panel1.Controls.Add(this.panel2);
@@ -62,7 +64,7 @@
             this.btnConfig.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConfig.Image = ((System.Drawing.Image)(resources.GetObject("btnConfig.Image")));
             this.btnConfig.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConfig.Location = new System.Drawing.Point(0, 340);
+            this.btnConfig.Location = new System.Drawing.Point(0, 399);
             this.btnConfig.Name = "btnConfig";
             this.btnConfig.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.btnConfig.Size = new System.Drawing.Size(209, 59);
@@ -78,11 +80,11 @@
             this.btnShowRegisters.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnShowRegisters.Image = ((System.Drawing.Image)(resources.GetObject("btnShowRegisters.Image")));
             this.btnShowRegisters.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnShowRegisters.Location = new System.Drawing.Point(0, 281);
+            this.btnShowRegisters.Location = new System.Drawing.Point(0, 340);
             this.btnShowRegisters.Name = "btnShowRegisters";
             this.btnShowRegisters.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.btnShowRegisters.Size = new System.Drawing.Size(209, 59);
-            this.btnShowRegisters.TabIndex = 3;
+            this.btnShowRegisters.TabIndex = 4;
             this.btnShowRegisters.Text = "Ver Registros";
             this.btnShowRegisters.UseVisualStyleBackColor = false;
             this.btnShowRegisters.Click += new System.EventHandler(this.btnShowRegisters_Click);
@@ -118,7 +120,7 @@
             this.btnHome.Name = "btnHome";
             this.btnHome.Padding = new System.Windows.Forms.Padding(14, 0, 0, 0);
             this.btnHome.Size = new System.Drawing.Size(209, 59);
-            this.btnHome.TabIndex = 2;
+            this.btnHome.TabIndex = 1;
             this.btnHome.Text = "Inicio";
             this.btnHome.UseVisualStyleBackColor = false;
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
@@ -134,11 +136,28 @@
             // 
             // panelContenedor
             // 
-            this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelContenedor.Location = new System.Drawing.Point(211, 0);
             this.panelContenedor.Name = "panelContenedor";
             this.panelContenedor.Size = new System.Drawing.Size(1053, 620);
             this.panelContenedor.TabIndex = 1;
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.BackColor = System.Drawing.Color.Gainsboro;
+            this.btnEditar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnEditar.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditar.Image = ((System.Drawing.Image)(resources.GetObject("btnEditar.Image")));
+            this.btnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEditar.Location = new System.Drawing.Point(0, 281);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnEditar.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnEditar.Size = new System.Drawing.Size(209, 59);
+            this.btnEditar.TabIndex = 3;
+            this.btnEditar.Text = "Actualizar";
+            this.btnEditar.UseVisualStyleBackColor = false;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // Home
             // 
@@ -167,5 +186,6 @@
         private System.Windows.Forms.Button btnHome;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panelContenedor;
+        private System.Windows.Forms.Button btnEditar;
     }
 }

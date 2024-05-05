@@ -30,6 +30,7 @@ namespace Gimnasio
             btnHome.BackColor = Color.Gainsboro;
             btnShowRegisters.BackColor = Color.Gainsboro;
             btnConfig.BackColor = Color.Gainsboro;
+            btnEditar.BackColor = Color.Gainsboro;
 
 
             AbrirFormHijo(new Register());
@@ -49,6 +50,7 @@ namespace Gimnasio
             btnHome.BackColor = Color.Gainsboro;
             btnRegister.BackColor = Color.Gainsboro;
             btnConfig.BackColor = Color.Gainsboro;
+            btnEditar.BackColor = Color.Gainsboro;
 
 
             AbrirFormHijo(new ShowRegisters());
@@ -60,6 +62,7 @@ namespace Gimnasio
             btnShowRegisters.BackColor = Color.Gainsboro;
             btnHome.BackColor = Color.Gainsboro;
             btnRegister.BackColor = Color.Gainsboro;
+            btnEditar.BackColor = Color.Gainsboro;
         }
 
 
@@ -76,6 +79,18 @@ namespace Gimnasio
             this.panelContenedor.Controls.Add(fh);
             this.panelContenedor.Tag = fh;
             fh.Show();
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            btnEditar.BackColor = Color.SteelBlue;
+            btnShowRegisters.BackColor = Color.Gainsboro;
+            btnHome.BackColor = Color.Gainsboro;
+            btnRegister.BackColor = Color.Gainsboro;
+            btnConfig.BackColor = Color.Gainsboro;
+
+
+            AbrirFormHijo(new Update());
         }
     }
 }
