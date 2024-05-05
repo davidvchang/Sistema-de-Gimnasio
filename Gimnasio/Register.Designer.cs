@@ -181,6 +181,7 @@
             this.dateTimePickerFechaInicio.Name = "dateTimePickerFechaInicio";
             this.dateTimePickerFechaInicio.Size = new System.Drawing.Size(97, 24);
             this.dateTimePickerFechaInicio.TabIndex = 13;
+            this.dateTimePickerFechaInicio.Value = new System.DateTime(2024, 5, 4, 22, 12, 12, 0);
             // 
             // label7
             // 
@@ -210,7 +211,7 @@
             this.dateTimePickerFechaFinal.Name = "dateTimePickerFechaFinal";
             this.dateTimePickerFechaFinal.Size = new System.Drawing.Size(97, 24);
             this.dateTimePickerFechaFinal.TabIndex = 15;
-            this.dateTimePickerFechaFinal.Value = new System.DateTime(2024, 6, 4, 0, 0, 0, 0);
+            this.dateTimePickerFechaFinal.Value = new System.DateTime(2024, 5, 4, 0, 0, 0, 0);
             // 
             // tbTelefono
             // 

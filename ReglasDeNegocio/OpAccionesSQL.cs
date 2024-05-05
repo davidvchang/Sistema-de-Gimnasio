@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -69,6 +70,32 @@ namespace ReglasDeNegocio
             }
 
             return bAllOk;
+        }
+
+        public DataTable MostrarRegistradosEnDGV()
+        {
+            DataTable dt = new DataTable();
+
+            using(SqlConnection conexion = new SqlConnection(opConexion.CadenaConexion()))
+            {
+                try
+                {
+                    conexion.Open();
+                    string query = "SELECT * FROM Clientes";
+                    SqlCommand comando = new SqlCommand(query, conexion);
+                    SqlDataAdapter adapter = new SqlDataAdapter(query, conexion);
+                    adapter.Fill(dt);
+                }
+                catch (Exception ex)
+                {
+                    sLastError = ex.Message;
+                }
+                finally
+                {
+                    conexion.Close();
+                }
+            }
+            return dt;
         }
     }
 }
