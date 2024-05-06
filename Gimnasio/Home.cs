@@ -21,6 +21,7 @@ namespace Gimnasio
         {
             btnHome.Focus();
             btnHome.BackColor = Color.SteelBlue;
+            AbrirFormHijo(new Inicio());
         }
 
         private void btnRegister_Click(object sender, EventArgs e)
@@ -42,6 +43,8 @@ namespace Gimnasio
             btnRegister.BackColor = Color.Gainsboro;
             btnShowRegisters.BackColor = Color.Gainsboro;
             btnConfig.BackColor = Color.Gainsboro;
+
+            AbrirFormHijo(new Inicio());
         }
 
         private void btnShowRegisters_Click(object sender, EventArgs e)
@@ -63,6 +66,9 @@ namespace Gimnasio
             btnHome.BackColor = Color.Gainsboro;
             btnRegister.BackColor = Color.Gainsboro;
             btnEditar.BackColor = Color.Gainsboro;
+
+
+            AbrirFormHijo(new Config());
         }
 
 

@@ -50,6 +50,9 @@
             this.label10 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnActualizar = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.tbID = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -68,7 +71,7 @@
             // btnSearch
             // 
             this.btnSearch.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.Location = new System.Drawing.Point(749, 63);
+            this.btnSearch.Location = new System.Drawing.Point(601, 64);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(112, 33);
             this.btnSearch.TabIndex = 16;
@@ -79,16 +82,16 @@
             // tbSearch
             // 
             this.tbSearch.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbSearch.Location = new System.Drawing.Point(236, 68);
+            this.tbSearch.Location = new System.Drawing.Point(322, 69);
             this.tbSearch.Name = "tbSearch";
-            this.tbSearch.Size = new System.Drawing.Size(491, 24);
+            this.tbSearch.Size = new System.Drawing.Size(253, 24);
             this.tbSearch.TabIndex = 15;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(176, 69);
+            this.label2.Location = new System.Drawing.Point(262, 70);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(54, 19);
             this.label2.TabIndex = 14;
@@ -96,6 +99,7 @@
             // 
             // tbTelefono
             // 
+            this.tbTelefono.Enabled = false;
             this.tbTelefono.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbTelefono.Location = new System.Drawing.Point(345, 238);
             this.tbTelefono.Name = "tbTelefono";
@@ -124,6 +128,7 @@
             // 
             // dateTimePickerFechaFinal
             // 
+            this.dateTimePickerFechaFinal.Enabled = false;
             this.dateTimePickerFechaFinal.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePickerFechaFinal.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePickerFechaFinal.Location = new System.Drawing.Point(584, 152);
@@ -131,6 +136,7 @@
             this.dateTimePickerFechaFinal.Size = new System.Drawing.Size(97, 24);
             this.dateTimePickerFechaFinal.TabIndex = 31;
             this.dateTimePickerFechaFinal.Value = new System.DateTime(2024, 5, 4, 0, 0, 0, 0);
+            this.dateTimePickerFechaFinal.ValueChanged += new System.EventHandler(this.dateTimePickerFechaFinal_ValueChanged);
             // 
             // label7
             // 
@@ -144,6 +150,7 @@
             // 
             // dateTimePickerFechaInicio
             // 
+            this.dateTimePickerFechaInicio.Enabled = false;
             this.dateTimePickerFechaInicio.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePickerFechaInicio.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePickerFechaInicio.Location = new System.Drawing.Point(425, 152);
@@ -154,6 +161,7 @@
             // 
             // tbDirección
             // 
+            this.tbDirección.Enabled = false;
             this.tbDirección.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbDirección.Location = new System.Drawing.Point(749, 152);
             this.tbDirección.Multiline = true;
@@ -163,6 +171,7 @@
             // 
             // tbMesesPagados
             // 
+            this.tbMesesPagados.Enabled = false;
             this.tbMesesPagados.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbMesesPagados.Location = new System.Drawing.Point(550, 238);
             this.tbMesesPagados.Name = "tbMesesPagados";
@@ -171,14 +180,17 @@
             // 
             // tbEdad
             // 
+            this.tbEdad.Enabled = false;
             this.tbEdad.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbEdad.Location = new System.Drawing.Point(303, 152);
             this.tbEdad.Name = "tbEdad";
             this.tbEdad.Size = new System.Drawing.Size(60, 24);
             this.tbEdad.TabIndex = 26;
+            this.tbEdad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbEdad_KeyPress);
             // 
             // tbApellidos
             // 
+            this.tbApellidos.Enabled = false;
             this.tbApellidos.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbApellidos.Location = new System.Drawing.Point(108, 238);
             this.tbApellidos.Name = "tbApellidos";
@@ -187,6 +199,7 @@
             // 
             // tbNombre
             // 
+            this.tbNombre.Enabled = false;
             this.tbNombre.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbNombre.Location = new System.Drawing.Point(108, 152);
             this.tbNombre.Name = "tbNombre";
@@ -254,7 +267,7 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(1004, 246);
             this.dataGridView1.TabIndex = 35;
-            this.dataGridView1.DoubleClick += new System.EventHandler(this.dataGridView1_DoubleClick);
+            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
             // btnActualizar
             // 
@@ -267,11 +280,44 @@
             this.btnActualizar.UseVisualStyleBackColor = true;
             this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
+            // btnDelete
+            // 
+            this.btnDelete.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.Location = new System.Drawing.Point(737, 278);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(124, 47);
+            this.btnDelete.TabIndex = 37;
+            this.btnDelete.Text = "Eliminar";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // tbID
+            // 
+            this.tbID.Enabled = false;
+            this.tbID.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbID.Location = new System.Drawing.Point(108, 69);
+            this.tbID.Name = "tbID";
+            this.tbID.Size = new System.Drawing.Size(60, 24);
+            this.tbID.TabIndex = 39;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(104, 47);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(22, 19);
+            this.label11.TabIndex = 38;
+            this.label11.Text = "ID";
+            // 
             // Update
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1053, 620);
+            this.Controls.Add(this.tbID);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.tbTelefono);
@@ -328,5 +374,8 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnActualizar;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.TextBox tbID;
+        private System.Windows.Forms.Label label11;
     }
 }

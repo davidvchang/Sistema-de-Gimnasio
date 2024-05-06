@@ -47,6 +47,8 @@
             this.dateTimePickerFechaFinal = new System.Windows.Forms.DateTimePicker();
             this.tbTelefono = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.tbID = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -135,9 +137,11 @@
             this.tbEdad.Name = "tbEdad";
             this.tbEdad.Size = new System.Drawing.Size(60, 24);
             this.tbEdad.TabIndex = 8;
+            this.tbEdad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbEdad_KeyPress);
             // 
             // tbMesesPagados
             // 
+            this.tbMesesPagados.Enabled = false;
             this.tbMesesPagados.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbMesesPagados.Location = new System.Drawing.Point(447, 216);
             this.tbMesesPagados.Name = "tbMesesPagados";
@@ -215,6 +219,7 @@
             this.dateTimePickerFechaFinal.Size = new System.Drawing.Size(97, 24);
             this.dateTimePickerFechaFinal.TabIndex = 15;
             this.dateTimePickerFechaFinal.Value = new System.DateTime(2024, 5, 4, 0, 0, 0, 0);
+            this.dateTimePickerFechaFinal.ValueChanged += new System.EventHandler(this.dateTimePickerFechaFinal_ValueChanged);
             // 
             // tbTelefono
             // 
@@ -234,11 +239,32 @@
             this.label9.TabIndex = 17;
             this.label9.Text = "Telefono";
             // 
+            // tbID
+            // 
+            this.tbID.Enabled = false;
+            this.tbID.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbID.Location = new System.Drawing.Point(57, 48);
+            this.tbID.Name = "tbID";
+            this.tbID.Size = new System.Drawing.Size(60, 24);
+            this.tbID.TabIndex = 20;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(53, 26);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(22, 19);
+            this.label10.TabIndex = 19;
+            this.label10.Text = "ID";
+            // 
             // Register
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1053, 620);
+            this.Controls.Add(this.tbID);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.tbTelefono);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
@@ -289,5 +315,7 @@
         private System.Windows.Forms.DateTimePicker dateTimePickerFechaFinal;
         private System.Windows.Forms.TextBox tbTelefono;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox tbID;
+        private System.Windows.Forms.Label label10;
     }
 }
